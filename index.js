@@ -5,7 +5,7 @@ const authRouter = require('./routes/admin/auth');
 const adminProductRouter = require('./routes/admin/products');
 const productRouter = require('./routes/products');
 const cartsRouter = require('./routes/carts');
-
+const port = process.env.PORT || 3000;
 
 const app = express();
 
@@ -20,6 +20,6 @@ app.use(adminProductRouter);
 app.use(productRouter);
 app.use(cartsRouter);
 
-app.listen(3000, () => {
+app.listen(port, () => {
     console.log('Listening');
 })
